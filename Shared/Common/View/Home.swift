@@ -9,6 +9,30 @@ import SwiftUI
 
 struct Home: View {
   @State var currentType: String = "Microphone"
+  @State var devices: [Device] = Home.keyboards
+  
+  static let cameras: [Device] = [
+    // TODO
+  ]
+  static let microphones: [Device] = [
+    // TODO
+  ]
+  static let keyboards: [Device] = [
+    Device(id: "1", name: "keyboard"),
+    Device(id: "2", name: "keyboard"),
+    Device(id: "3", name: "keyboard"),
+    Device(id: "4", name: "keyboard"),
+    Device(id: "5", name: "keyboard"),
+    Device(id: "6", name: "keyboard"),
+    Device(id: "7", name: "keyboard"),
+    Device(id: "8", name: "keyboard"),
+    Device(id: "9", name: "keyboard"),
+    Device(id: "10", name: "keyboard"),
+    Device(id: "11", name: "keyboard"),
+    Device(id: "12", name: "keyboard"),
+    Device(id: "13", name: "keyboard"),
+    Device(id: "14", name: "keyboard"),
+  ]
   
   // MARK: For Smooth Effect
   @Namespace var animation
@@ -21,7 +45,9 @@ struct Home: View {
         // MARK: Pinned Header with Content
         LazyVStack(pinnedViews: [.sectionHeaders]) {
           Section {
-            
+            DeviceList()
+              .padding(.horizontal)
+              .padding(.vertical, 16)
           } header: {
             PinnedHeaderView()
           }
@@ -39,12 +65,12 @@ struct Home: View {
     GeometryReader { proxy in
       let minY = proxy.frame(in: .named("SCROLL")).minY
       let size = proxy.size
-      let height = (size.height + minY)
+      let height = size.height + minY
       
       Image("mic")
         .resizable()
         .aspectRatio(contentMode: .fill)
-        .frame(width: size.width, height: height, alignment: .top)
+        .frame(width: size.width, height: height < 0 ? 0 : height, alignment: .top)
         .overlay(content: {
           ZStack(alignment: .bottom) {
             LinearGradient(colors: [
@@ -114,8 +140,31 @@ struct Home: View {
         }
       }
       .padding(.horizontal)
-      .padding(.top, 25)
+      .padding(.top, 44)
       .padding(.bottom, 5)
+    }
+    .background(Color.white)
+  }
+  
+  // MARK: Pinned Content
+  @ViewBuilder
+  func DeviceList() -> some View {
+    VStack(spacing: 25) {
+      ForEach($devices) { $device in
+        HStack(spacing: 12) {
+          Image(device.name)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .frame(width: 55, height: 55)
+            .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                       
+          VStack(alignment: .leading, spacing: 8) {
+            Text(device.name)
+              .fontWeight(.semibold)
+          }
+          .frame(maxWidth: .infinity, alignment: .leading)
+        }
+      }
     }
   }
 }

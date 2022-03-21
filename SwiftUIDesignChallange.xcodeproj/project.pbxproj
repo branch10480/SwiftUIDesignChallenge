@@ -11,7 +11,7 @@
 		4813746027E87A57001BFB4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813744F27E87A54001BFB4F /* ContentView.swift */; };
 		4813746227E87A57001BFB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4813745027E87A57001BFB4F /* Assets.xcassets */; };
 		4813747027E87CDA001BFB4F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813746F27E87CDA001BFB4F /* Home.swift */; };
-		4813747227E87D2F001BFB4F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813747127E87D2F001BFB4F /* Book.swift */; };
+		4813747227E87D2F001BFB4F /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813747127E87D2F001BFB4F /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +21,7 @@
 		4813745527E87A57001BFB4F /* SwiftUIDesignChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDesignChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4813745D27E87A57001BFB4F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		4813746F27E87CDA001BFB4F /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		4813747127E87D2F001BFB4F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		4813747127E87D2F001BFB4F /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 		4813746D27E87CAB001BFB4F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4813747127E87D2F001BFB4F /* Book.swift */,
+				4813747127E87D2F001BFB4F /* Device.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4813747227E87D2F001BFB4F /* Book.swift in Sources */,
+				4813747227E87D2F001BFB4F /* Device.swift in Sources */,
 				4813746027E87A57001BFB4F /* ContentView.swift in Sources */,
 				4813747027E87CDA001BFB4F /* Home.swift in Sources */,
 				4813745E27E87A57001BFB4F /* SwiftUIDesignChallangeApp.swift in Sources */,
