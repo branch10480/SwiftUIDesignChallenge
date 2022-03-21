@@ -8,17 +8,32 @@
 import SwiftUI
 
 struct Home: View {
+  @State var currentType: String = "Microphone"
+  
+  // MARK: For Smooth Effect
+  @Namespace var animation
+  
   var body: some View {
     ScrollView(.vertical, showsIndicators: false) {
       VStack(spacing: 0) {
         HeaderView()
+        
+        // MARK: Pinned Header with Content
+        LazyVStack(pinnedViews: [.sectionHeaders]) {
+          Section {
+            
+          } header: {
+            PinnedHeaderView()
+          }
+
+        }
       }
     }
     .coordinateSpace(name: "SCROLL")
     .ignoresSafeArea(.container, edges: .vertical)
   }
   
-  // MARK: - Header View
+  // MARK: Header View
   @ViewBuilder
   func HeaderView() -> some View {
     GeometryReader { proxy in
@@ -58,6 +73,50 @@ struct Home: View {
         .offset(y: -minY)
     }
     .frame(height: 250)
+  }
+  
+  // MARK: Pinned Header
+  @ViewBuilder
+  func PinnedHeaderView() -> some View {
+    let types: [String] = [
+      "Microphone",
+      "Camera",
+      "Keyboard",
+    ]
+    
+    ScrollView(.horizontal, showsIndicators: false) {
+      HStack(spacing: 25) {
+        ForEach(types, id: \.self) { type in
+          VStack(spacing: 15) {
+            Text(type)
+              .fontWeight(.semibold)
+              .foregroundColor(currentType == type ? .black : .gray)
+            
+            ZStack {
+              if currentType == type {
+                RoundedRectangle(cornerRadius: 4, style: .continuous)
+                  .fill(.black)
+                  .matchedGeometryEffect(id: "TAB", in: animation)
+              } else {
+                RoundedRectangle(cornerRadius: 4, style: .continuous)
+                  .fill(.clear)
+              }
+            }
+            .padding(.horizontal, 8)
+            .frame(height: 4)
+          }
+          .contentShape(Rectangle())
+          .onTapGesture {
+            withAnimation(.easeOut) {
+              currentType = type
+            }
+          }
+        }
+      }
+      .padding(.horizontal)
+      .padding(.top, 25)
+      .padding(.bottom, 5)
+    }
   }
 }
 
