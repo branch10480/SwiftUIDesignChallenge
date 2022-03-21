@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4813745E27E87A57001BFB4F /* SwiftUIDesignChallangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813744E27E87A54001BFB4F /* SwiftUIDesignChallangeApp.swift */; };
-		4813745F27E87A57001BFB4F /* SwiftUIDesignChallangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813744E27E87A54001BFB4F /* SwiftUIDesignChallangeApp.swift */; };
 		4813746027E87A57001BFB4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813744F27E87A54001BFB4F /* ContentView.swift */; };
-		4813746127E87A57001BFB4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813744F27E87A54001BFB4F /* ContentView.swift */; };
 		4813746227E87A57001BFB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4813745027E87A57001BFB4F /* Assets.xcassets */; };
-		4813746327E87A57001BFB4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4813745027E87A57001BFB4F /* Assets.xcassets */; };
+		4813747027E87CDA001BFB4F /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813746F27E87CDA001BFB4F /* Home.swift */; };
+		4813747227E87D2F001BFB4F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4813747127E87D2F001BFB4F /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,19 +19,13 @@
 		4813744F27E87A54001BFB4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4813745027E87A57001BFB4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4813745527E87A57001BFB4F /* SwiftUIDesignChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDesignChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4813745B27E87A57001BFB4F /* SwiftUIDesignChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDesignChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4813745D27E87A57001BFB4F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		4813746F27E87CDA001BFB4F /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		4813747127E87D2F001BFB4F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4813745227E87A57001BFB4F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4813745827E87A57001BFB4F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,6 +47,7 @@
 		4813744D27E87A54001BFB4F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4813746C27E87C9A001BFB4F /* Common */,
 				4813744E27E87A54001BFB4F /* SwiftUIDesignChallangeApp.swift */,
 				4813744F27E87A54001BFB4F /* ContentView.swift */,
 				4813745027E87A57001BFB4F /* Assets.xcassets */,
@@ -65,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				4813745527E87A57001BFB4F /* SwiftUIDesignChallange.app */,
-				4813745B27E87A57001BFB4F /* SwiftUIDesignChallange.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +69,31 @@
 				4813745D27E87A57001BFB4F /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		4813746C27E87C9A001BFB4F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4813746E27E87CB1001BFB4F /* View */,
+				4813746D27E87CAB001BFB4F /* Model */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4813746D27E87CAB001BFB4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4813747127E87D2F001BFB4F /* Book.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4813746E27E87CB1001BFB4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4813746F27E87CDA001BFB4F /* Home.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,23 +116,6 @@
 			productReference = 4813745527E87A57001BFB4F /* SwiftUIDesignChallange.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4813745A27E87A57001BFB4F /* SwiftUIDesignChallange (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4813746927E87A57001BFB4F /* Build configuration list for PBXNativeTarget "SwiftUIDesignChallange (macOS)" */;
-			buildPhases = (
-				4813745727E87A57001BFB4F /* Sources */,
-				4813745827E87A57001BFB4F /* Frameworks */,
-				4813745927E87A57001BFB4F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SwiftUIDesignChallange (macOS)";
-			productName = "SwiftUIDesignChallange (macOS)";
-			productReference = 4813745B27E87A57001BFB4F /* SwiftUIDesignChallange.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -126,9 +127,6 @@
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					4813745427E87A57001BFB4F = {
-						CreatedOnToolsVersion = 13.3;
-					};
-					4813745A27E87A57001BFB4F = {
 						CreatedOnToolsVersion = 13.3;
 					};
 				};
@@ -147,7 +145,6 @@
 			projectRoot = "";
 			targets = (
 				4813745427E87A57001BFB4F /* SwiftUIDesignChallange (iOS) */,
-				4813745A27E87A57001BFB4F /* SwiftUIDesignChallange (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -161,14 +158,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4813745927E87A57001BFB4F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4813746327E87A57001BFB4F /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -176,17 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4813747227E87D2F001BFB4F /* Book.swift in Sources */,
 				4813746027E87A57001BFB4F /* ContentView.swift in Sources */,
+				4813747027E87CDA001BFB4F /* Home.swift in Sources */,
 				4813745E27E87A57001BFB4F /* SwiftUIDesignChallangeApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4813745727E87A57001BFB4F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4813746127E87A57001BFB4F /* ContentView.swift in Sources */,
-				4813745F27E87A57001BFB4F /* SwiftUIDesignChallangeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +309,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -356,60 +338,8 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		4813746A27E87A57001BFB4F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.toshi-sv.SwiftUIDesignChallange";
-				PRODUCT_NAME = SwiftUIDesignChallange;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		4813746B27E87A57001BFB4F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "me.toshi-sv.SwiftUIDesignChallange";
-				PRODUCT_NAME = SwiftUIDesignChallange;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -430,15 +360,6 @@
 			buildConfigurations = (
 				4813746727E87A57001BFB4F /* Debug */,
 				4813746827E87A57001BFB4F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4813746927E87A57001BFB4F /* Build configuration list for PBXNativeTarget "SwiftUIDesignChallange (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4813746A27E87A57001BFB4F /* Debug */,
-				4813746B27E87A57001BFB4F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
